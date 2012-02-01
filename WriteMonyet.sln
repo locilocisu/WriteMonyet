@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteMonyet", "Komodo\WriteMonyet.csproj", "{CE4D21A7-E4DB-4957-B1B0-72547A9F285A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteMonyet", "WriteMonyet\WriteMonyet.csproj", "{CE4D21A7-E4DB-4957-B1B0-72547A9F285A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kamus", "Kamus\Kamus.csproj", "{ACDA4183-F6CE-40C2-93F2-4560AB8D9960}"
 EndProject
