@@ -20,7 +20,7 @@ namespace Kamus
                 int i = 0;
                 while (i < 30000)
                 {
-                    reader.ReadToFollowing("text");
+                    reader.ReadToFollowing("text ");
                     reader.MoveToAttribute("left");
                     string leftPx = reader.Value;
                     reader.MoveToAttribute("font");
