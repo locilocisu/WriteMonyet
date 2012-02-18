@@ -1,1 +1,4 @@
-WriteMonyet
+WriteMonyet README
+
+Currently this project is in its nascent stage. Most of the work is on cleaning up the dictionary's source 
+XML and htmls, and then converting it into a SQL database
