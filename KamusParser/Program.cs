@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.IO;
-using System.Text;
 
 namespace Kamus
 {
@@ -15,32 +14,28 @@ namespace Kamus
             StringBuilder output = new StringBuilder();
 
             // Create an XmlReader
-            using (XmlReader reader = XmlReader.Create("C:\\Users\\locilocisu\\Dropbox\\Kamus Besar Bahasa Indonesia.xml"))
+            using (XmlReader reader = XmlReader.Create("KBBI/KBBI.xml"))
             {
-                int i = 0;
-                while (i < 30000)
+               
+                bool yespage= false;
+               do
                 {
-                    reader.ReadToFollowing("text ");
-                    reader.MoveToAttribute("left");
-                    string leftPx = reader.Value;
-                    reader.MoveToAttribute("font");
-                    string fontSize = reader.Value;
-                    if (fontSize.Equals("13") && (leftPx.Equals("378") || leftPx.Equals("86") || leftPx.Equals("162")))
+                    try
                     {
-                        reader.MoveToElement();
-                        if (reader.ReadToDescendant("b"))
-                        {
-                            Console.WriteLine(reader.ReadElementContentAsString());
-                        }
-                        
+                        yespage = reader.ReadToFollowing("page");
+                        Console.WriteLine(reader.GetAttribute("number"));
                     }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                }while(yespage);
 
-                    i++;
-                }
-                
+
+
             }
 
-           Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
